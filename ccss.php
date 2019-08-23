@@ -67,19 +67,21 @@ function ccss_add_box() {
 function ccss_save() {	
 	global $post_ID;
 
-	if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) return;
-	//if (!current_user_can( 'edit_post', $post_id ) ) return; ***CN***
-
-	$id = $_POST['post_ID'];
-	$css_sheet = $_POST['ccss'];
-	
-	// no need to keep extra info in db for posts/pages without an extra stylesheet.
-	if ($css_sheet != '-1') {
- 	update_post_meta($id, 'css_sheet', $css_sheet);
- }
- else {
-  delete_post_meta($id, 'css_sheet');
- }
+  if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) return;
+  
+  //if (!current_user_can( 'edit_post', $post_id ) ) return; ***CN***
+  
+  if ( isset($_POST['post_ID']) && isset($_POST['ccss']) ) {
+    $id = $_POST['post_ID'];
+    $css_sheet = $_POST['ccss'];
+    
+    // no need to keep extra info in db for posts/pages without an extra stylesheet.
+    if ($css_sheet != '-1') {
+      update_post_meta($id, 'css_sheet', $css_sheet);
+    } else {
+      delete_post_meta($id, 'css_sheet');
+    }
+  }
 }
 
 function ccss_include() {
