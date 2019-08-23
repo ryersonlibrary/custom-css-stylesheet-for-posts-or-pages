@@ -1,29 +1,29 @@
 <?php
-/*
-Plugin Name: Custom CSS for Posts and Pages (CCSS)
-Plugin URI: http://webtoolkit4.me
-Description: An easy way to include custom stylesheets per post/page
-Version: 1.21
-Author: Gerasimos Tsiamalos
-Author URI: http://theportraitofageek.com/
-
-
-Copyright 2010  Gerasimos Tsiamalos  (email : tsiger@gmail.com)
-
-This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 2 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program; if not, write to the Free Software
-Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-*/
+/**
+ * Plugin Name: Custom CSS for Posts and Pages (CCSS)
+ * Plugin URI: https://github.com/ryersonlibrary/custom-css-stylesheet-for-posts-or-pages
+ * Description: An easy way to include custom stylesheets per post/page. Legacy plugin support for the Ryerson University Library & Archives website.
+ * Version: 1.21.1
+ * Author: Ryerson University Library, Gerasimos Tsiamalos
+ * Author URI: https://github.com/ryersonlibrary/
+ * GitHub Plugin URI: https://github.com/ryersonlibrary/custom-css-stylesheet-for-posts-or-pages
+ *
+ * Copyright 2010  Gerasimos Tsiamalos  (email : tsiger@gmail.com)
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+ */
 
 
 /* CHANGE THE FOLLOWING IF YOU NEED A DIFFERENT PATH IT MUST BE A SUBDIR IN YOUR THEME'S FOLDER */
