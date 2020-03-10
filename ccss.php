@@ -3,7 +3,7 @@
  * Plugin Name: Custom CSS for Posts and Pages (CCSS)
  * Plugin URI: https://github.com/ryersonlibrary/custom-css-stylesheet-for-posts-or-pages
  * Description: An easy way to include custom stylesheets per post/page. Legacy plugin support for the Ryerson University Library & Archives website.
- * Version: 1.21.1
+ * Version: 1.21.2
  * Author: Ryerson University Library, Gerasimos Tsiamalos
  * Author URI: https://github.com/ryersonlibrary/
  * GitHub Plugin URI: https://github.com/ryersonlibrary/custom-css-stylesheet-for-posts-or-pages
@@ -85,15 +85,16 @@ function ccss_save() {
 }
 
 function ccss_include() {
- global $wp_query;
- $id = $wp_query->post->ID;
- $the_sheet  = get_post_meta($id, 'css_sheet','true'); // stylesheet name
- $the_path   = get_stylesheet_directory_uri(); // path to our template folder
- $the_output = $the_path . CCSS_PATH . $the_sheet; // let's create the whole thing
- if ($the_sheet) {
+  global $wp_query;
+  // $id = $wp_query->post->ID;
+  $id = get_the_ID();
+  $the_sheet  = get_post_meta($id, 'css_sheet','true'); // stylesheet name
+  $the_path   = get_stylesheet_directory_uri(); // path to our template folder
+  $the_output = $the_path . CCSS_PATH . $the_sheet; // let's create the whole thing
+  if ($the_sheet) {
   if (is_single() || is_page())
-	 wp_enqueue_style('css_sheet', $the_output, TRUE, CCSS_VERSION, 'screen,projection'); 
- }
+    wp_enqueue_style('css_sheet', $the_output, TRUE, CCSS_VERSION, 'screen,projection'); 
+  }
 }
 
 // fetch a list of all custom types so we can assign the dropdown to each one of them
